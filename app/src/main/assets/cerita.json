@@ -1,0 +1,47 @@
+[
+  {
+    "nama": "Laskar Pelangi",
+    "genre": "Lainnya",
+    "image": "laskar",
+    "views": 1200,
+    "deskripsi": "Sebuah kisah inspiratif dari Belitung.",
+    "penulis": "Andrea Hirata",
+    "tahun": 2005
+  },
+  {
+    "nama": "The Star And I",
+    "genre": "Fiksi",
+    "image": "star",
+    "views": 850,
+    "deskripsi": "Sebuah kisah inspiratif dari Belitung.",
+    "penulis": "Andrea Hirata",
+    "tahun": 2005
+  },
+  {
+    "nama": "Sirah Nabawiyah",
+    "genre": "Religi",
+    "image": "sirah",
+    "views": 1700,
+    "deskripsi": "Sebuah kisah inspiratif dari Belitung.",
+    "penulis": "Andrea Hirata",
+    "tahun": 2005
+  },
+  {
+    "nama": "Romantic Killer",
+    "genre": "Romance",
+    "image": "romantickiller",
+    "views": 950,
+    "deskripsi": "Sebuah kisah inspiratif dari Belitung.",
+    "penulis": "Andrea Hirata",
+    "tahun": 2005
+  },
+  {
+    "nama": "One Piece",
+    "genre": "Anime",
+    "image": "onepiece",
+    "views": 600,
+    "deskripsi": "Sebuah kisah inspiratif dari Belitung.",
+    "penulis": "Andrea Hirata",
+    "tahun": 2005
+  }
+]

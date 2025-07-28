@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F7FF"> <!-- biru muda kalem bg -->
+
+    <!-- Tombol Back -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="Kembali"
+        app:tint="#2255FF" />
+
+    <!-- Scroll Isi -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnBack"
+        android:layout_marginTop="8dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageCerita"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_card"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/namaCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul Cerita"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1D3557" />
+
+            <TextView
+                android:id="@+id/genreCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                android:textColor="#457B9D"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/viewsCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Views"
+                android:textColor="#A8A8A8"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/penulisCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penulis"
+                android:textColor="#A8A8A8"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tahunCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tahun"
+                android:textColor="#A8A8A8"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/deskripsiCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi panjang cerita..."
+                android:textColor="#2B2D42"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="6dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

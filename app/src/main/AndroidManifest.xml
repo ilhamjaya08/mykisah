@@ -8,6 +8,9 @@
         android:label="App Cerita"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".DetailCerita"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity

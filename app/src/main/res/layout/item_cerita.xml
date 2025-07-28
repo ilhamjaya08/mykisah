@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Gambar Cover -->
+        <ImageView
+            android:id="@+id/coverCerita"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_cover"
+            android:contentDescription="Cover Cerita"
+            android:background="@android:color/background_dark" />
+
+        <!-- Detail Cerita -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/namaCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Judul Cerita"
+                android:textColor="@color/primaryText"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/genreCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Romance"
+                android:textColor="@color/hintText"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/viewsCerita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12.345 views"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -16,11 +16,20 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        // Delay 2 detik sebelum ke Login
+        SessionManager session = new SessionManager(this);
+
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreen.this, Login.class);
+            Intent intent;
+            if (session.isLoggedIn()) {
+                // User udah login, langsung ke Dashboard
+                intent = new Intent(SplashScreen.this, Dashboard.class);
+            } else {
+                // Belum login, ke Login
+                intent = new Intent(SplashScreen.this, Login.class);
+            }
             startActivity(intent);
             finish();
         }, 2000);
     }
+
 }
