@@ -1,10 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    tools:context=".RegisterActivity"
+    android:background="@color/bgSoft"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_mykisah"
+        android:contentDescription="Logo Mykisah" />
+
+    <!-- Teks Judul -->
+    <TextView
+        android:id="@+id/teksRegister"
+        android:layout_below="@id/logoApp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Akun MyKisah"
+        android:textSize="24sp"
+        android:textColor="@color/primaryText"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!-- Nama Lengkap -->
+    <EditText
+        android:id="@+id/edNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teksRegister"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Nama Lengkap"
+        android:background="@drawable/edittext_modern"
+        android:inputType="textPersonName"
+        android:minHeight="50dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/primaryText"
+        android:textColorHint="@color/hintText" />
+
+    <!-- Username -->
+    <EditText
+        android:id="@+id/edUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edNama"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Username"
+        android:background="@drawable/edittext_modern"
+        android:inputType="text"
+        android:minHeight="50dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/primaryText"
+        android:textColorHint="@color/hintText" />
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edUsername"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Email"
+        android:background="@drawable/edittext_modern"
+        android:inputType="textEmailAddress"
+        android:minHeight="50dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/primaryText"
+        android:textColorHint="@color/hintText" />
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edEmail"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Password"
+        android:background="@drawable/edittext_modern"
+        android:inputType="textPassword"
+        android:minHeight="50dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/primaryText"
+        android:textColorHint="@color/hintText" />
+
+    <!-- Tombol Daftar -->
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edPassword"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/button_modern" />
+
+    <!-- Link Login -->
+    <TextView
+        android:id="@+id/linkLogin"
+        android:layout_below="@id/btnDaftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sudah mempunyai akun? Login di sini"
+        android:textColor="@color/primaryButton"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+</RelativeLayout>

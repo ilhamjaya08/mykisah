@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,9 +8,21 @@
     android:background="@color/bgSoft"
     >
 
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_mykisah"
+        android:contentDescription="Logo Mykisah" />
+
+    <!-- Teks Login -->
     <TextView
         android:id="@+id/tekslogin"
-        android:layout_marginTop="60dp"
+        android:layout_below="@id/logoApp"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masuk ke Mykisah"
@@ -21,6 +32,7 @@
         android:layout_centerHorizontal="true"
         />
 
+    <!-- Username -->
     <EditText
         android:id="@+id/editekuser"
         android:layout_width="match_parent"
@@ -38,6 +50,7 @@
         android:textColorHint="@color/hintText"
         />
 
+    <!-- Password -->
     <EditText
         android:id="@+id/editekpassword"
         android:layout_width="match_parent"
@@ -55,6 +68,7 @@
         android:textColorHint="@color/hintText"
         />
 
+    <!-- Tombol Login -->
     <Button
         android:id="@+id/tombollogin"
         android:layout_width="match_parent"
@@ -72,4 +86,17 @@
         android:background="@drawable/button_modern"
         />
 
+    <!-- Link Daftar -->
+    <TextView
+        android:id="@+id/linkRegister"
+        android:layout_below="@id/tombollogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum mempunyai akun? Daftar di sini"
+        android:textColor="@color/primaryButton"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true" />
 </RelativeLayout>

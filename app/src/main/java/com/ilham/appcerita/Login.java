@@ -1,24 +1,21 @@
 package com.ilham.appcerita;
 
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
 
     private EditText username, password;
     private Button btnLogin;
+    private TextView linkRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +26,7 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.editekuser);
         password = findViewById(R.id.editekpassword);
         btnLogin = findViewById(R.id.tombollogin);
+        linkRegister = findViewById(R.id.linkRegister);
 
         // Aksi tombol login
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +52,15 @@ public class Login extends AppCompatActivity {
                     username.setText("");
                     password.setText("");
                 }
+            }
+        });
+
+        // Aksi klik "Daftar di sini"
+        linkRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Register.class);
+                startActivity(intent);
             }
         });
     }
