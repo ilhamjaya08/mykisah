@@ -54,7 +54,7 @@
                 android:id="@+id/iconUser"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/user"
+                android:src="@drawable/logout"
                 android:contentDescription="User Icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

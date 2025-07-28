@@ -4,8 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="App Cerita"
+        android:icon="@drawable/logo_mykisah"
+        android:label="Mykisah"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".DetailCerita"

@@ -1,7 +1,10 @@
     package com.ilham.appcerita;
 
+    import android.content.Intent;
     import android.os.Bundle;
     import android.util.Log;
+    import android.widget.Button;
+    import android.widget.ImageView;
 
     import androidx.activity.EdgeToEdge;
     import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +45,18 @@
 
             setupKategori();
             setupCeritaPopuler();
+
+            ImageView btnLogout = findViewById(R.id.iconUser);
+            btnLogout.setOnClickListener(v -> {
+                SessionManager session = new SessionManager(Dashboard.this);
+                session.logout();
+
+                Intent intent = new Intent(Dashboard.this, Login.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            });
+
         }
 
         private void setupKategori() {
