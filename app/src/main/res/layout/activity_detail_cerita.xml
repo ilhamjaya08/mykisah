@@ -92,6 +92,24 @@
                 android:layout_marginTop="12dp"
                 android:lineSpacingExtra="6dp" />
 
+            <TextView
+                android:id="@+id/labelBaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baca Buku:"
+                android:textStyle="bold"
+                android:textColor="#1D3557"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp" />
+
+            <WebView
+                android:id="@+id/webViewPdf"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card" />
+
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

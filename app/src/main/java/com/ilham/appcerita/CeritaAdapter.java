@@ -66,6 +66,7 @@ public class CeritaAdapter extends RecyclerView.Adapter<CeritaAdapter.ViewHolder
             intent.putExtra("deskripsi", data.getDeskripsi());
             intent.putExtra("penulis", data.getPenulis());
             intent.putExtra("tahun", data.getTahun());
+            intent.putExtra("pdf", data.getPdf());
             context.startActivity(intent);
         });
 

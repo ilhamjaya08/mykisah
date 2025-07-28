@@ -106,8 +106,9 @@
                     String deskripsi = obj.getString("deskripsi");
                     String penulis = obj.getString("penulis");
                     int tahun = obj.getInt("tahun");
+                    String pdf = obj.optString("pdf");
 
-                    ceritaList.add(new Cerita(nama, genre, image, views, deskripsi, penulis, tahun));
+                    ceritaList.add(new Cerita(nama, genre, image, views, deskripsi, penulis, tahun, pdf));
                 }
 
             } catch (Exception e) {

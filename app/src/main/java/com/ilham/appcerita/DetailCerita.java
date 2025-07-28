@@ -1,10 +1,15 @@
 package com.ilham.appcerita;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +46,17 @@ public class DetailCerita extends AppCompatActivity {
         btnBack.setOnClickListener(v -> {
             finish(); // balik ke activity sebelumnya
         });
+
+        WebView webView = findViewById(R.id.webViewPdf);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setAllowFileAccess(true);
+        webView.getSettings().setAllowContentAccess(true);
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(true); // Penting biar file:// bisa akses file lain
+
+        webView.setWebViewClient(new WebViewClient()); // Biar gak dilempar ke browser eksternal
+
+        String localPdfPath = "file:///android_asset/pdfjs/web/viewer.html?file=file:///android_asset/laskar-pelangi.pdf";
+        webView.loadUrl(localPdfPath);
 
     }
 }
